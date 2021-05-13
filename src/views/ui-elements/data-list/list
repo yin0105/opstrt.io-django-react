@@ -1,0 +1,28 @@
+<DataTable
+          columns={portfolio_columns}
+          data={this.state.portfolios}
+          pagination
+          paginationServer
+          noHeader
+          subHeader
+          responsive
+          pointerOnHover
+          sortIcon={<ChevronDown />}
+        />
+
+        <DataTable
+          columns={portfolio_columns}
+          data={this.state.portfolios}
+          pagination
+          paginationServer
+          noHeader
+          subHeader
+          selectableRows
+          responsive
+          pointerOnHover
+          selectableRowsHighlight
+          onSelectedRowsChange={data =>
+            this.setState({ selected: data.selectedRows })
+          }
+          sortIcon={<ChevronDown />}
+        />
